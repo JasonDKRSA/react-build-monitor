@@ -5,45 +5,22 @@ import request from 'request';
 import Servers from './components/servers';
 
 class App extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         endPoints: [
-    //             {
-    //                 "id": 0,
-    //                 "url": "https://test.cognition-app.com/api/status",
-    //                 "status": null,
-    //             },
-    //             {
-    //                 "id": 1,
-    //                 "url": "https://ord.dev.stackworx.io/health",
-    //                 "status": null,
-    //             },
-    //             {
-    //                 "id": 2,
-    //                 "url": "https://api.durf.dev.stackworx.io/health",
-    //                 "status": null,
-    //             },
-    //             {
-    //                 "id": 3,
-    //                 "url": "https://prima.run/health",
-    //                 "status": null,
-    //             },
-    //             {
-    //                 "id": 4,
-    //                 "url": "https://stackworx.io/",
-    //                 "status": null,
-    //             },
-    //         ]
-    //     }
-    // }
+    state = {
+        endPoints: [
+            "https://ord.dev.stackworx.io/health",
+            "https://test.cognition-app.com/api/status",
+            "https://api.durf.dev.stackworx.io/health",
+            "https://prima.run/health",
+            "https://stackworx.io/",
+        ]
+    }
 
     render() {
         return (
             <div>
                 <h1>Build Monitor</h1>
                 <div>
-                    <Servers />
+                    <Servers serverList={this.state.endPoints}/>
                 </div>
             </div>
         );

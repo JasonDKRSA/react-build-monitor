@@ -1,7 +1,7 @@
 import React from "react";
 
 const Server = props => (
-    <li>Github server - Status (ok)</li>
+    <li>{props.url} - status (OK)</li>
 )
 
 export default Server;
