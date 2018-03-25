@@ -5,8 +5,13 @@ const Servers = props => (
     <span>
         <h1>List of servers:</h1>
         <ul>
-            {  
-                props.serverList.map(item => (<Server url={item} />))
+            {
+                Object.keys(props.serverList).map(key => (
+                    <Server 
+                        key={props.serverList[key].id} 
+                        server={props.serverList[key]} 
+                    />
+                ))
             }
         </ul>
     </span>
