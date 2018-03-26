@@ -78,7 +78,7 @@ class App extends React.Component {
                     this.state.checkNumber ?
                     copyState.endPoints[key].status :
                     "";
-                copyState.endPoints[key].status = 'Error retieving status';
+                copyState.endPoints[key].status = 'Error';
                 this.setState(copyState);
             })
         ))
@@ -98,13 +98,16 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>Build Monitor</h1>
-                <div>
+                <nav className="nav">
+                    <h1>> Build Monitor</h1>
+                </nav>
+                
+                <section className="items">
                     <Servers 
                         key={this.state.endPoints.id} 
                         serverList={this.state.endPoints}
                     />
-                </div>
+                </section>
             </div>
         );
     }

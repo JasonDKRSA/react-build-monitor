@@ -3,8 +3,8 @@ import Server from "./server";
 
 const Servers = props => (
     <span>
-        <h1>List of servers:</h1>
-        <ul>
+        <h1><u>List of servers:</u></h1>
+        <div>
             {
                 Object.keys(props.serverList).map(key => (
                     <Server 
@@ -13,7 +13,7 @@ const Servers = props => (
                     />
                 ))
             }
-        </ul>
+        </div>
     </span>
 )
 
