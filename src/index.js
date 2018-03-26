@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import request from 'request';
 
 import Servers from './components/servers';
+import Help from './components/help';
 
 class App extends React.Component {
     state = {
@@ -102,12 +103,14 @@ class App extends React.Component {
                     <h1>> Build Monitor</h1>
                 </nav>
                 
-                <section className="items">
+                <div className="items">
                     <Servers 
                         key={this.state.endPoints.id} 
                         serverList={this.state.endPoints}
                     />
-                </section>
+                </div>
+
+                <Help/>
             </div>
         );
     }

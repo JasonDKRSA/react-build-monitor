@@ -32,6 +32,7 @@ nav {
 
 .items {
   margin: 40px;
+  overflow: auto;
 }
 
 .down {
@@ -46,3 +47,6 @@ nav {
   background-color: rgb(81, 240, 81);
 }
 
+.help{
+  margin: 50px;
+}
