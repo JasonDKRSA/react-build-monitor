@@ -103,7 +103,7 @@ class App extends React.Component {
                     <h1>> Build Monitor</h1>
                 </nav>
                 
-                <div className="items">
+                <div className="container">
                     <Servers 
                         key={this.state.endPoints.id} 
                         serverList={this.state.endPoints}

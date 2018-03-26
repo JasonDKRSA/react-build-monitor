@@ -4,7 +4,8 @@ import Server from "./server";
 const Servers = props => (
     <span>
         <h1><u>List of servers:</u></h1>
-        <div>
+        
+        <ul className="items">
             {
                 Object.keys(props.serverList).map(key => (
                     <Server 
@@ -13,7 +14,7 @@ const Servers = props => (
                     />
                 ))
             }
-        </div>
+        </ul>
     </span>
 )
 

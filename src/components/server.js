@@ -4,7 +4,7 @@ import '../index.css';
 
 const Server = props => (
     
-    <div>
+    <li>
         {props.server.status && 
             <div 
                 onClick={() => window.alert('The result of the last check was: ' + (props.server.lastStatus === undefined ? "No previous status!" : props.server.lastStatus))}
@@ -19,7 +19,7 @@ const Server = props => (
                 {props.server.url}
             </div>
         }
-    </div>
+    </li>
 )
 
 export default Server;
