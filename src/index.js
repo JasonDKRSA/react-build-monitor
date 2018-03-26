@@ -69,6 +69,10 @@ class App extends React.Component {
 
     componentDidMount(){
         this.fetchStatus();
+        const timerId = setInterval(
+            () => this.fetchStatus(),
+            300000
+        )
     }
 
     render() {
