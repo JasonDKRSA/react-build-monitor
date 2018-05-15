@@ -2,7 +2,11 @@ import React from "react";
 import Server from "./server";
 
 function checkUrlForDev(url){
-    const devStrings = ["dev","qa","test"];
+    const devStrings = [
+        "dev",
+        "qa",
+        "test"
+    ];
 
     const devIndex = devStrings.map(devString => {
         return url.indexOf(devString);
